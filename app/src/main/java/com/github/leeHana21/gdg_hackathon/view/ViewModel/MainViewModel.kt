@@ -43,11 +43,11 @@ class MainViewModel : ViewModel() {
             if(response.isSuccessful) bookMarkPostLiveData.postValue(response.body())
         }
     }
-    val myPostPostLiveData = MutableLiveData<PostsResponse>()
+    val myPostLiveData = MutableLiveData<PostsResponse>()
     fun getMyPosts(userId : String) {
         viewModelScope.launch(exceptionHandler) {
             val response = apiRepository.getMyPosts(userId)
-            if(response.isSuccessful) myPostPostLiveData.postValue(response.body())
+            if(response.isSuccessful) myPostLiveData.postValue(response.body())
         }
     }
     val postDetailLiveData = MutableLiveData<PostDetailResponse>()
