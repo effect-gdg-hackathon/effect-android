@@ -1,13 +1,21 @@
 package com.github.leeHana21.gdg_hackathon.entity
 
-data class PostsResponse(
-    val posts : ArrayList<PostDetail>? = null
-)
+import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+
+@Parcelize
+data class PostsResponse(
+    @SerializedName("list")
+    val posts : ArrayList<PostDetail>? = null
+) : Parcelable
+
+@Parcelize
 data class PostDetail(
     var title : String ? = null,
     var postId : String ? = null,
     var creatorId : String ? = null,
     var imageUrl : String ? = null,
     var userId : String ? = null
-)
+) : Parcelable
