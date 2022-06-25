@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/drawable/category_label_background.xml" value="0.1" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/drawable/selector_upload_image.xml" value="0.14" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_main.xml" value="0.18654434250764526" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_splash.xml" value="0.1" />
-        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/card_full_posts.xml" value="0.264" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_upload.xml" value="0.176" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/card_full_posts.xml" value="0.152" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/category_label.xml" value="0.264" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/fragment_post_items.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/fragment_post_items2.xml" value="0.24947916666666667" />

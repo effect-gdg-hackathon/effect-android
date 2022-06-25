@@ -5,6 +5,8 @@ import com.github.leeHana21.gdg_hackathon.entity.PostDetailResponse
 import com.github.leeHana21.gdg_hackathon.entity.UploadRequest
 import com.github.leeHana21.gdg_hackathon.entity.PostsResponse
 import com.github.leeHana21.gdg_hackathon.entity.UploadResponse
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -22,5 +24,8 @@ interface ApiService {
     suspend fun getPostDetail(@Path("postId") postId : String) : Response<PostDetailResponse>
 
     @POST("/api/upload")
-    suspend fun postEffect(@Query("userId") userId : String) : Response<UploadResponse>
+    @Multipart
+    suspend fun postEffect(@Query("userId") userId : String,
+                           @Part file : MultipartBody.Part,
+                            @Part("data") data : RequestBody) : Response<UploadResponse>
 }

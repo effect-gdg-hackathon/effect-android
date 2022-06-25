@@ -1,6 +1,7 @@
 package com.github.leeHana21.gdg_hackathon.view
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -10,70 +11,65 @@ import com.github.leeHana21.gdg_hackathon.databinding.ActivityMainBinding
 import com.github.leeHana21.gdg_hackathon.databinding.CardFullPostsBinding
 import com.github.leeHana21.gdg_hackathon.entity.Category
 import com.github.leeHana21.gdg_hackathon.entity.PostDetail
+import com.github.leeHana21.gdg_hackathon.entity.PostsData
+import com.github.leeHana21.gdg_hackathon.entity.PostsResponse
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private val mainViewModel = MainViewModel()
-    private var popularData : Array<PostDetail> ? = null
-    private var lifeData : Array<PostDetail> ? = null
-    private var interviewData : Array<PostDetail> ? = null
+    private var popularData : PostsResponse ? = null
+    private var lifeData : PostsResponse ? = null
+    private var interviewData : PostsResponse ? = null
+    private lateinit var popularAdapter : PostItemsRecyclerViewAdapter
+    private lateinit var lifeAdapter : PostItemsRecyclerViewAdapter
+    private lateinit var interviewAdapter : PostItemsRecyclerViewAdapter
+    private var tabPosition : Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        getDataFromRemote()
+        setUpData()
         initView()
     }
-    private fun setUpData(){
-    }
-
-    private fun getDataFromRemote()= with(mainViewModel){
-        getCategoryPosts(Category.POPULAR.categoryName)
+    private fun setUpData() {
+        popularData = PostsData.popularData
+        lifeData = PostsData.lifeData
+        interviewData = PostsData.interviewData
+        popularAdapter = PostItemsRecyclerViewAdapter(Category.POPULAR, popularData!!.posts!!.toList())
+        lifeAdapter = PostItemsRecyclerViewAdapter(Category.LIFE, lifeData!!.posts!!.toList())
+        interviewAdapter = PostItemsRecyclerViewAdapter(Category.INTERVIEW, interviewData!!.posts!!.toList())
     }
 
     private fun initView()= with(binding) {
         activity = this@MainActivity
+        rvList.adapter = popularAdapter
 
         tabMain.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
+                tabPosition = tab?.position ?: 0
                 when(tab?.position){
-                    1 ->{
-
+                    1 -> {
+                        binding.rvList.adapter = null
+                        binding.rvList.adapter = lifeAdapter
                     }
                     2 -> {
-
+                        binding.rvList.adapter = null
+                        binding.rvList.adapter = interviewAdapter
                     }
                     else -> {
-
+                        binding.rvList.adapter = null
+                        binding.rvList.adapter = popularAdapter
                     }
                 }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
-
         })
-
-        val list = listOf(PostDetail(title = "타이틀",
-            "1",
-            creatorId = "1","https://725f-118-129-228-11.ngrok.io/images/0bb18f8e305ca6ae-1656160445486.png","1"),PostDetail(title = "타이틀",
-            "1",
-            creatorId = "1","https://725f-118-129-228-11.ngrok.io/images/0bb18f8e305ca6ae-1656160445486.png","1"),PostDetail(title = "타이틀",
-            "1",
-            creatorId = "1","https://725f-118-129-228-11.ngrok.io/images/0bb18f8e305ca6ae-1656160445486.png","1"),PostDetail(title = "타이틀",
-            "1",
-            creatorId = "1","https://725f-118-129-228-11.ngrok.io/images/0bb18f8e305ca6ae-1656160445486.png","1"),PostDetail(title = "타이틀",
-            "1",
-            creatorId = "1","https://725f-118-129-228-11.ngrok.io/images/0bb18f8e305ca6ae-1656160445486.png","1"))
-        val postsAdapter = PostItemsRecyclerViewAdapter(Category.POPULAR,list)
-        rvList.adapter = postsAdapter
-
     }
 
     private fun setUpObserver()= with(mainViewModel){
@@ -83,19 +79,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onAddPostClick(){
-        showToast(this, "이동 이동")
-        // startActivity()
+        startActivity(Intent(this,UploadActivity::class.java))
     }
 
     fun onClickHome(){
-        showToast(this, "이동 이동")
-
-        // startActivity()
+        if(tabPosition != 0){
+            binding.rvList.adapter = null
+            binding.rvList.adapter = popularAdapter
+            binding.tabMain.setScrollPosition(0,0f,true)
+        }
     }
 
     fun onClickProfile(){
-        showToast(this, "프래그먼트 전환 이동 이동")
-        // startActivity()
+        startActivity(Intent(this,UploadActivity::class.java))
 
     }
 
