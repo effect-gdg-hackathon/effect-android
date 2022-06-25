@@ -52,13 +52,15 @@ class UploadActivity : AppCompatActivity() {
     }
 
     private fun setUpView() {
+        binding.empty = true
+
         // 카테고리 spinner
         resources?.getStringArray(R.array.category_array)?.let {
             binding.uploadCategorySpinner.adapter =
                 ArrayAdapter(this, R.layout.spinner_dropdwon_item, it)
         }
 
-        binding.uploadDeviceImageInput.setOnClickListener {
+        binding.detailEffectSpreadBtn.setOnClickListener {
             readImage.launch("image/*")
         }
 
@@ -74,7 +76,8 @@ class UploadActivity : AppCompatActivity() {
     }
 
     private val readImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
-        binding.uploadImageView.setImageURI(uri)
+        binding.uploadImageBtn.setImageURI(uri)
+        binding.empty = false
         realPath = getRealPathFromURI(uri) ?: "-"
         Log.d("uri", "uri: $realPath")
     }

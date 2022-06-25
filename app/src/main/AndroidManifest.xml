@@ -15,10 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DetailActivity"
+            android:name=".view.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MypageActivity"
+            android:name=".view.MyEffectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.MypageActivity"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

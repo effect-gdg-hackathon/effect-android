@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickProfile(){
-        startActivity(Intent(this,UploadActivity::class.java))
+        startActivity(Intent(this,MypageActivity::class.java))
 
     }
 

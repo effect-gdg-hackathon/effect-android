@@ -208,7 +208,7 @@
                 android:id="@+id/detail_effect_spread_btn"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:background="@drawable/shape_radius_square_solid_6201ff"
+                android:background="@drawable/shape_radius_square_solid_6201ff_btn"
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detail_now_effect_card_view" />
 
