@@ -10,4 +10,6 @@
     <color name="color_888888">#888888</color>
     <color name="color_cccccc">#CCCCCC</color>
     <color name="transparent">#00000000</color>
+    <color name="key_blue">#6201FF</color>
+    <color name="gray">#888888</color>
 </resources>

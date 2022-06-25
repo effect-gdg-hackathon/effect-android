@@ -1,4 +1,4 @@
-package com.github.leeHana21.gdg_hackathon.view
+package com.github.leeHana21.gdg_hackathon.view.viewModel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData

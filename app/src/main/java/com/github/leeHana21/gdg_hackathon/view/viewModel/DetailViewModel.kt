@@ -1,4 +1,4 @@
-package com.github.leeHana21.gdg_hackathon.view.ViewModel
+package com.github.leeHana21.gdg_hackathon.view.viewModel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -9,12 +9,11 @@ import com.github.leeHana21.gdg_hackathon.entity.*
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
+import okhttp3.Request
 import okhttp3.RequestBody
-import retrofit2.http.Multipart
-import retrofit2.http.Part
 import java.lang.Exception
 
-class MainViewModel : ViewModel() {
+class DetailViewModel: ViewModel() {
     private val apiRepository = ApiRepository()
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         Log.d("viewModelException", "exception: $throwable ")
@@ -28,7 +27,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    val postAllLiveData = MutableLiveData<Triple<PostsResponse,PostsResponse,PostsResponse>>()
+    val postAllLiveData = MutableLiveData<Triple<PostsResponse, PostsResponse, PostsResponse>>()
     fun getCategoryProjectAll(){
         viewModelScope.launch(exceptionHandler) {
             try {
@@ -36,9 +35,9 @@ class MainViewModel : ViewModel() {
                 val lifeRs = apiRepository.getCategoryPosts(Category.LIFE.categoryName)
                 val interviewRs = apiRepository.getCategoryPosts(Category.INTERVIEW.categoryName)
                 if(popularRs.isSuccessful && lifeRs.isSuccessful && interviewRs.isSuccessful){
-                        PostsData.popularData = popularRs.body()!!
-                        PostsData.lifeData = lifeRs.body()!!
-                        PostsData.interviewData = interviewRs.body()!!
+                    PostsData.popularData = popularRs.body()!!
+                    PostsData.lifeData = lifeRs.body()!!
+                    PostsData.interviewData = interviewRs.body()!!
                     postAllLiveData.postValue(Triple(popularRs.body()!!,lifeRs.body()!!,interviewRs.body()!!))
                 }
             } catch (e : Exception) {
@@ -53,11 +52,11 @@ class MainViewModel : ViewModel() {
             if(response.isSuccessful) bookMarkPostLiveData.postValue(response.body())
         }
     }
-    val myPostLiveData = MutableLiveData<PostsResponse>()
+    val myPostPostLiveData = MutableLiveData<PostsResponse>()
     fun getMyPosts(userId : String) {
         viewModelScope.launch(exceptionHandler) {
             val response = apiRepository.getMyPosts(userId)
-            if(response.isSuccessful) myPostLiveData.postValue(response.body())
+            if(response.isSuccessful) myPostPostLiveData.postValue(response.body())
         }
     }
     val postDetailLiveData = MutableLiveData<PostDetailResponse>()
@@ -73,7 +72,6 @@ class MainViewModel : ViewModel() {
         viewModelScope.launch(exceptionHandler) {
             val response = apiRepository.postEffect(userId, file,requestBody)
             if(response.isSuccessful) uploadResponse.postValue(response.body())
-
         }
     }
 }

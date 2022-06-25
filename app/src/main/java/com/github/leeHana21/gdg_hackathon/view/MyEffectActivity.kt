@@ -2,27 +2,20 @@ package com.github.leeHana21.gdg_hackathon.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.github.leeHana21.gdg_hackathon.databinding.ActivityMyeffectBinding
-import com.github.leeHana21.gdg_hackathon.view.ViewModel.MainViewModel
+import androidx.databinding.DataBindingUtil
+import com.github.leeHana21.gdg_hackathon.R
+import com.github.leeHana21.gdg_hackathon.databinding.ActivityMyEffectBinding
+import com.github.leeHana21.gdg_hackathon.entity.Category
+import com.github.leeHana21.gdg_hackathon.entity.PostsData
 
 class MyEffectActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMyeffectBinding
-    private val mainViewModel = MainViewModel()
-
+    private lateinit var binding: ActivityMyEffectBinding
+    private val postAdapter by lazy {
+        PostItemsRecyclerViewAdapter(Category.INTERVIEW, values = PostsData.interviewData!!.posts!!)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMyeffectBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        getDataFromRemote()
-        setUpView()
-    }
-
-    private fun setUpView() {
-
-    }
-
-    private fun getDataFromRemote()= with(mainViewModel){
-        getMyPosts("1")
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_my_effect)
+        binding.myeffectRecyclerview.adapter = postAdapter
     }
 }
