@@ -1,6 +1,7 @@
 package com.github.leeHana21.gdg_hackathon.view
 
 import android.os.Bundle
+<<<<<<< HEAD
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,7 +20,7 @@ class BookmarkActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.fragment_bookmark)
+        binding = DataBindingUtil.setContentView(this, R.layout.fragment_bookmark)
         binding.uploadRecyclerview.adapter = postAdapter
     }
 }

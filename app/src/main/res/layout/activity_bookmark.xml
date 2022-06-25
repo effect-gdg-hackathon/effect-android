@@ -6,7 +6,11 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD:app/src/main/res/layout/fragment_bookmark.xml
         tools:context=".view.MyEffectActivity">
+=======
+        tools:context=".view.BookmarkActivity">
+>>>>>>> bc413bfa8701784091241509ffb38fbe669ea789:app/src/main/res/layout/activity_bookmark.xml
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/upload_toolbar"
