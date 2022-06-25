@@ -1,4 +1,4 @@
-package com.github.leeHana21.gdg_hackathon.view.ViewModel
+package com.github.leeHana21.gdg_hackathon.view.viewModel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -10,8 +10,6 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import retrofit2.http.Multipart
-import retrofit2.http.Part
 import java.lang.Exception
 
 class MainViewModel : ViewModel() {

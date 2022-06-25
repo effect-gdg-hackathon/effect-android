@@ -1,6 +1,7 @@
 package com.github.leeHana21.gdg_hackathon.view
 
 import android.Manifest
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.DocumentsContract
@@ -14,6 +15,7 @@ import com.github.leeHana21.gdg_hackathon.R
 import com.github.leeHana21.gdg_hackathon.databinding.ActivityUploadBinding
 import com.github.leeHana21.gdg_hackathon.entity.Category
 import com.github.leeHana21.gdg_hackathon.entity.UploadRequest
+import com.github.leeHana21.gdg_hackathon.view.viewModel.UploadViewModel
 import com.google.gson.Gson
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -46,13 +48,12 @@ class UploadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUploadBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         checkPermission.launch(permissionList)
         setUpView()
+        setUpObserver()
     }
 
     private fun setUpView() {
-        // 카테고리 spinner
         resources?.getStringArray(R.array.category_array)?.let {
             binding.uploadCategorySpinner.adapter =
                 ArrayAdapter(this, R.layout.spinner_dropdwon_item, it)
@@ -68,9 +69,10 @@ class UploadActivity : AppCompatActivity() {
     }
     private fun setUpObserver(){
         viewModel.uploadResponse.observe(this){
-            //startActivity(Intent(this))
+            val intent = Intent(this,DetailActivity::class.java)
+            intent.putExtra("postId",it.postId)
+            startActivity(intent)
         }
-
     }
 
     private val readImage = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->

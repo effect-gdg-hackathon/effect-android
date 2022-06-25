@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GDG-Hackathon</string>
+    <string name="app_name">effect</string>
     <string name="popular">인기</string>
     <string name="life">생활</string>
     <string name="interview">면접</string>
@@ -13,4 +13,5 @@
     <!-- 마이페이지 -->
     <string name="mypage_my_effect_btn">나의 이펙트</string>
     <string name="bookmark">북마크</string>
+    <string name="my_effect">나의 이펙트</string>
 </resources>

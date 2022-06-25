@@ -1,4 +1,4 @@
-package com.github.leeHana21.gdg_hackathon.view
+package com.github.leeHana21.gdg_hackathon.view.viewModel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -13,7 +13,7 @@ import okhttp3.Request
 import okhttp3.RequestBody
 import java.lang.Exception
 
-class UploadViewModel: ViewModel() {
+class DetailViewModel: ViewModel() {
     private val apiRepository = ApiRepository()
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         Log.d("viewModelException", "exception: $throwable ")

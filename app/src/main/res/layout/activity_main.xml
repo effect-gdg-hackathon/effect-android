@@ -22,12 +22,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:tabTextColor="@color/gray"
+            app:tabSelectedTextColor="#6201FF"
+            app:tabIndicatorColor="#6201FF"
             app:layout_constraintBottom_toTopOf="@id/rv_list">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/popular" />
+                android:text="@string/popular"/>
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -65,6 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_home"
+                android:tint="#6201FF"
                 android:onClick="@{()->activity.onClickHome()}"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +79,7 @@
                 android:id="@+id/iv_add_post"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_plus"
+                android:src="@drawable/ic_add"
                 android:onClick="@{()->activity.onAddPostClick()}"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -86,7 +90,8 @@
                 android:id="@+id/iv_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_profile"
+                android:src="@drawable/ic_user"
+                android:tint="@color/gray"
                 android:onClick="@{()->activity.onClickProfile()}"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

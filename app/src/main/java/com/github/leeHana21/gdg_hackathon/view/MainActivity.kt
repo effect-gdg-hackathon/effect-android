@@ -2,6 +2,7 @@ package com.github.leeHana21.gdg_hackathon.view
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -9,7 +10,7 @@ import androidx.databinding.DataBindingUtil
 import com.github.leeHana21.gdg_hackathon.R
 import com.github.leeHana21.gdg_hackathon.databinding.ActivityMainBinding
 import com.github.leeHana21.gdg_hackathon.entity.Category
-import com.github.leeHana21.gdg_hackathon.view.ViewModel.MainViewModel
+import com.github.leeHana21.gdg_hackathon.view.viewModel.MainViewModel
 import com.github.leeHana21.gdg_hackathon.entity.PostsData
 import com.github.leeHana21.gdg_hackathon.entity.PostsResponse
 import com.google.android.material.tabs.TabLayout
@@ -85,11 +86,13 @@ class MainActivity : AppCompatActivity() {
             binding.rvList.adapter = null
             binding.rvList.adapter = popularAdapter
             binding.tabMain.setScrollPosition(0,0f,true)
+            binding.ivHome.setColorFilter(Color.parseColor("#6201FF"))
+            binding.ivProfile.setColorFilter(Color.parseColor("#888888"))
         }
     }
 
     fun onClickProfile(){
-        startActivity(Intent(this,UploadActivity::class.java))
+        startActivity(Intent(this,MyPageActivity::class.java))
 
     }
 
