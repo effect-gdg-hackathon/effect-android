@@ -12,5 +12,5 @@
 
     <!-- 마이페이지 -->
     <string name="mypage_my_effect_btn">나의 이펙트</string>
-    <string name="mypage_bookmark_btn">북마크</string>
+    <string name="bookmark">북마크</string>
 </resources>

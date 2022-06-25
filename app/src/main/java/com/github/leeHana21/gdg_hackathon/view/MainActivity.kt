@@ -7,11 +7,10 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.github.leeHana21.gdg_hackathon.R
 import com.github.leeHana21.gdg_hackathon.databinding.ActivityMainBinding
-import com.github.leeHana21.gdg_hackathon.databinding.CardFullPostsBinding
 import com.github.leeHana21.gdg_hackathon.entity.Category
 import com.github.leeHana21.gdg_hackathon.entity.PostDetail
+import com.github.leeHana21.gdg_hackathon.view.ViewModel.MainViewModel
 import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding

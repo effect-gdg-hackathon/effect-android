@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import com.github.leeHana21.gdg_hackathon.R
 import com.github.leeHana21.gdg_hackathon.databinding.ActivitySplashBinding
 import com.github.leeHana21.gdg_hackathon.entity.Category
+import com.github.leeHana21.gdg_hackathon.view.ViewModel.MainViewModel
 
 class SplashActivity : AppCompatActivity() {
     private var viewModel = MainViewModel()
