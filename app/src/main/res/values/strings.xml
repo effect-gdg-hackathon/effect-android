@@ -10,4 +10,7 @@
     <string name="upload_image_add_btn">내 사진 추가</string>
     <string name="upload_content_hint">내용을 입력해주세요</string>
 
+    <!-- 마이페이지 -->
+    <string name="mypage_my_effect_btn">나의 이펙트</string>
+    <string name="bookmark">북마크</string>
 </resources>
