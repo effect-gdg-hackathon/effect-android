@@ -6,8 +6,11 @@
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/drawable/category_label_background.xml" value="0.1" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/drawable/selector_upload_image.xml" value="0.14" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_bookmark.xml" value="0.109375" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_detail.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_main.xml" value="0.18654434250764526" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_my_effect.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_myeffect.xml" value="0.13072916666666667" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_mypage.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_splash.xml" value="0.136" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/activity_upload.xml" value="0.176" />
@@ -19,6 +22,8 @@
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/fragment_post_items2.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/fragment_post_list.xml" value="0.23278985507246377" />
         <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/layout/spinner_dropdwon_item.xml" value="0.12291666666666666" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1335" />
+        <entry key="..\:/Users/richi/AndroidProjects/GDG-hackathon/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1615" />
       </map>
     </option>
   </component>

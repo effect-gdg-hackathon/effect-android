@@ -6,11 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-<<<<<<< HEAD:app/src/main/res/layout/fragment_bookmark.xml
-        tools:context=".view.MyEffectActivity">
-=======
         tools:context=".view.BookmarkActivity">
->>>>>>> bc413bfa8701784091241509ffb38fbe669ea789:app/src/main/res/layout/activity_bookmark.xml
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/upload_toolbar"
@@ -25,9 +21,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
+                android:layout_gravity="left"
+                android:layout_marginStart="17dp"
                 android:text="@string/bookmark"
-                android:layout_marginStart="10dp"
                 android:textColor="@color/black" />
         </androidx.appcompat.widget.Toolbar>
 
@@ -36,8 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="10dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_marginTop="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/upload_toolbar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
