@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-    private const val baseUrl = "~~~수 정~~~"
+    private const val baseUrl = "https://1501-118-129-228-11.ngrok.io"
     private lateinit var apiService: ApiService
     fun getInstance() : ApiService {
         val builder =
