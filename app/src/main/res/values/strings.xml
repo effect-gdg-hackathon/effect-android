@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GDG-Hackathon</string>
+
+    <!-- 업로드 -->
+    <string name="upload_toolbar_title">이펙트 업로드</string>
+    <string name="upload_title_hint">제목을 입력해주세요</string>
+    <string name="upload_image_add_btn">내 사진 추가</string>
+    <string name="upload_content_hint">내용을 입력해주세요</string>
+
 </resources>
