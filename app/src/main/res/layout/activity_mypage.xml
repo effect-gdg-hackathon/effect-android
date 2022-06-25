@@ -23,7 +23,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/image_woman" />
 
             <TextView
                 android:id="@+id/mypage_user_name"
@@ -64,7 +64,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_launcher_background" />
+                        app:srcCompat="@drawable/ic_effect" />
 
                     <TextView
                         android:id="@+id/mypage_my_effect_title"
@@ -82,13 +82,13 @@
 
                     <ImageView
                         android:id="@+id/mypage_my_effect_arrow_btn"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
                         android:layout_marginEnd="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_launcher_background" />
+                        app:srcCompat="@drawable/ic_arrow_right" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
@@ -120,7 +120,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/ic_bookmark_unselected" />
 
             <TextView
                 android:id="@+id/mypage_bookmark_title"
@@ -129,7 +129,7 @@
                 android:layout_marginStart="8dp"
                 android:background="@color/transparent"
                 android:gravity="left|center_vertical"
-                android:text="@string/mypage_bookmark_btn"
+                android:text="@string/bookmark"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/mypage_bookmark_img"
@@ -138,13 +138,13 @@
 
             <ImageView
                 android:id="@+id/mypage_bookmark_arrow_btn"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="7dp"
+                android:layout_height="14dp"
                 android:layout_marginEnd="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                app:srcCompat="@drawable/ic_arrow_right" />
         </androidx.constraintlayout.widget.ConstraintLayout>
         <View
             android:id="@+id/mypage_bookmark_horizontal_view"
