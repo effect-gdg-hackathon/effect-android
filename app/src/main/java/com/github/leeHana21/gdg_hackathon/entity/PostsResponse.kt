@@ -13,8 +13,10 @@ data class PostsResponse(
 
 @Parcelize
 data class PostDetail(
+    var category: String? = null,
     var title : String ? = null,
     var postId : String ? = null,
+    var content : String? = null,
     var creatorId : String ? = null,
     var imageUrl : String ? = null,
     var userId : String ? = null

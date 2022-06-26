@@ -12,6 +12,7 @@
             android:id="@+id/detail_thumbnail_image"
             android:layout_width="match_parent"
             android:layout_height="204dp"
+            android:scaleType="fitXY"
             android:src="@color/cardview_dark_background"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +55,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="술자리 매너\n다같이 알아봅시다"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -99,7 +99,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="32dp"
-                android:text="술 이정도 술 밖에 드리지 못해 죄송합니다 이런뜻이라고 하네요ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ발렌타인 30년산도 직장상사앞에서는 상표가리래요ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
                 android:textColor="@color/black"
                 app:layout_constraintTop_toTopOf="parent" />
 

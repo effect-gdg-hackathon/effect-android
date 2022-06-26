@@ -33,14 +33,16 @@ class DetailActivity : AppCompatActivity() {
     private fun setUpObserver(){
         viewModel.postDetailLiveData.observe(this){
             binding.apply {
-                detailCategory.text = "생활"
+                detailCategory.text = when(it.category){
+                    Category.INTERVIEW.categoryName -> "면접"
+                    else -> "생활"
+                }
                 detailTitleTxt.text = it.title
-                detailContent.text = "상사에게는 상표를 가리고 따라드려요 ~~~ !!!"
+                detailContent.text = it.content
                 Glide.with(detailThumbnailImage.context)
                     .load(it.imageUrl)
                     .into(detailThumbnailImage)
             }
-
         }
     }
     private fun initView(){
