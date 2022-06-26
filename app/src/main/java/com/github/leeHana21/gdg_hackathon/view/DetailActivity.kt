@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.bumptech.glide.Glide
 import com.github.leeHana21.gdg_hackathon.R
 import com.github.leeHana21.gdg_hackathon.databinding.ActivityDetailBinding
 import com.github.leeHana21.gdg_hackathon.entity.Category
@@ -35,6 +36,9 @@ class DetailActivity : AppCompatActivity() {
                 detailCategory.text = "생활"
                 detailTitleTxt.text = it.title
                 detailContent.text = "상사에게는 상표를 가리고 따라드려요 ~~~ !!!"
+                Glide.with(detailThumbnailImage.context)
+                    .load(it.imageUrl)
+                    .into(detailThumbnailImage)
             }
 
         }

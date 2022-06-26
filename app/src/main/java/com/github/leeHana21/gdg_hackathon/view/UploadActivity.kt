@@ -75,6 +75,7 @@ class UploadActivity : AppCompatActivity() {
             val intent = Intent(this,DetailActivity::class.java)
             intent.putExtra("postId",it.postId)
             startActivity(intent)
+            finish()
         }
     }
 
