@@ -40,3 +40,7 @@ Jetpack AAC(Data Binding, ViewModel, Lifecycles, LiveData)
 
 ### 마이페이지
 <img src ="https://user-images.githubusercontent.com/22094204/175798524-3b2696a9-b6e7-491c-b5d6-cc2f8050a3da.png" width = "250" height = "520" ><img src ="https://user-images.githubusercontent.com/22094204/175798536-1547720e-b288-4eeb-a877-73da9448b3a3.png" width = "250" height = "520" ><img src ="https://user-images.githubusercontent.com/22094204/175798533-753efa8f-3a2c-4218-87ad-8a67ecbc53db.png" width = "250" height = "520" >
+
+### 발표자료
+[GDG 2조 발표.pdf](https://github.com/effect-gdg-hackathon/effect-android/files/8990863/GDG.2.pdf)
+
